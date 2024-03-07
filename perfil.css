@@ -1,0 +1,566 @@
+/*Utlizamos selectores universales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Ajustamos la posicion del header para que siempre se mantenga por encima del contenido de la página*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255); /*Color del header*/
+    box-shadow: 0 4px 25px -22px black; /*Sombra del header*/
+    z-index: 2; /*Nos aseguramos que el header esté por encima de todo*/
+}
+
+.header-content{
+    max-width: 1200px; 
+    margin: auto; /*Justificamos el header*/
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Centramos el logo de manera horizontal y vertical*/
+.logo{
+    height: 80px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/*Seleccionamos el color de nuestro logo*/
+.logo h1 b{
+    color:blue;
+}
+
+/*AQUI COMENZAMOS A TRABAJAR CON EL MENU*/
+.menu{
+    height: 80px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*Creamos un selector de las opciones de nuestro menú*/
+.menu-selected:before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{
+    color: #777777;
+    font-size: 18px;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover{
+    color: blue;
+}
+
+.menu .text-menu-selected{
+    color: blue;
+}
+
+.menu nav ul li a i{
+    display: none;
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: white;
+    border-radius: 100%;
+    color:gray;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+
+/*AQUI COMENZAMOS A TRABAJAR CON LA PORTADA*/
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../Img/perfil.jpg); /*Accedemos a la carpeta de imagenes*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Ajustamos el tamaño y color de nuestra portada*/
+.container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(231, 90, 90, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Centramos nuestro texto y párrafo*/
+.container-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/*Definimos un tamaño y color al texto*/
+.container-info-cover h1{
+    font-size: 60px;
+    font-weight: 500;
+    color:white;
+    margin-bottom: 20px;
+}
+
+/*Definimos un tamaño y color al párrafo*/
+.container-info-cover p{
+    color:white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/*Contenedor - contenido del articulo*/
+.container-content{
+    width: 1200px;
+    margin:auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+article:before{
+    content:'';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: blue; 
+}
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 10px;
+    color:#777777;
+}
+
+article img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*Aside de los articulos relacionados*/
+.container-aside aside{
+    width: 320px;
+    box-shadow: 0 0 20px -20px black;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.container-aside aside img{
+    width: 100%;
+}
+
+.container-aside aside, .container-aside aside p{
+    margin-top: 20px;
+    padding: 0px 20px;
+
+}
+
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: blue; /*Color de los botones*/
+    border:none;
+    color:white; /*Color de la letra de los botones*/
+    cursor:pointer;
+    border-radius: 6px;
+}
+
+.container-aside aside button:hover{
+    opacity: 0.9;
+}
+
+/*FOOTER - PIE DE PAGINA*/
+.container-footer{
+    width: 100%;
+    padding: 40px 0px;
+    background: gray;/*Definimos el color de nuestro footer*/
+    margin-top: 40px;
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;/*Definimos el tamaño de nuestro logo*/    
+}
+
+.container-footer footer .redes-footer{
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin:20px;
+    background:white;/*Color del circulo que rodea a nuestros iconos*/
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: rgb(0, 0, 0);/*Color de nuestros iconos*/
+}
+
+.container-footer footer .redes-footer .fa-facebook-f:hover{/*Aqui modificamos el color del icono de facebook al momento de interactuar con el*/
+    background: blue;
+    color:white;
+}
+
+.container-footer footer .redes-footer .fa-instagram:hover{/*Aqui modificamos el color del icono de instagram al momento de interactuar con el*/
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);/*Creamos un degradado para el logo de instagram*/
+    color:white;
+}
+
+.container-footer footer .redes-footer .fa-whatsapp:hover{/*Aqui modificamos el color del icono de whatsapp al momento de interactuar con el*/
+    background: rgb(26, 197, 49);
+    color:white;
+}
+
+.container-footer footer hr{
+    margin-top: 20px;
+    border:none;
+    height: 2px;
+    background:black;
+}
+
+.container-footer footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color:black;
+    font-weight: 500px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1220px){
+    .header-content,
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body{
+        overflow-x: hidden;
+    }
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .move-container-all{
+        transform: translateX(300px);
+    }
+
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: white;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral{
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    .menu-selected:before{
+        width: 0;
+    }
+
+    .menu nav ul li a{
+        margin-top: 40px;
+        color: gray;
+    }
+
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: blue; /*color de los iconos del menú*/
+    }
+
+    #icon-menu{
+        display: flex;
+    }
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+}
+
+/*Descripción del perfil*/
+.form-label-usuario{
+    font-size: 30px;
+    font-weight: 500;
+    color:black;
+    margin-bottom: 20px;
+    max-width: 800px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.form-control-usuario{
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;    
+}
+
+.form-label-nombre{
+    font-size: 30px;
+    font-weight: 500;
+    color:black;
+    margin-bottom: 20px;
+    max-width: 800px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.form-control-nombre{
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;   
+}
+
+.form-label-correo{
+    font-size: 30px;
+    font-weight: 500;
+    color:black;
+    margin-bottom: 20px;
+    max-width: 800px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.form-control-correo{
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; 
+}
+
+.form-label-edad{
+    font-size: 30px;
+    font-weight: 500;
+    color:black;
+    margin-bottom: 20px;
+    max-width: 800px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.form-control-edad{
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; 
+}
+
+.boton-modificar{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: blue; /*Color de los botones*/
+    border:none;
+    color:white; /*Color de la letra de los botones*/
+    cursor:pointer;
+    border-radius: 6px;
+}
+
+.boton-guardar{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: red; /*Color de los botones*/
+    border:none;
+    color:white; /*Color de la letra de los botones*/
+    cursor:pointer;
+    border-radius: 6px;
+}
+
+.boton-modificar:hover{
+    opacity: 0.9;
+}
+
+.boton-guardar:hover{
+    opacity: 0.9;
+}
