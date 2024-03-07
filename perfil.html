@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProgramaciónWebI</title>
+    <script src="https://kit.fontawesome.com/093074d40c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/perfil.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+
+    <!--Header - menu-->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1 style="color:red;">Bisontes<b>FCFM</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+                <nav>
+                    <ul>
+                        <li><a href="principal.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                        <li><a href="perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                        <li><a href="publicacion.html"><i class="fa-solid fa-pen"></i>Publicar</a></li>
+                        <li class="menu-selected"><a href="#" class="text-menu-selected"><i class="fa-solid fa-paperclip"></i>Blog</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>Contacto</a></li>
+                        <li><a href="avanzada.html"><i class="fa-solid fa-magnifying-glass"></i>Búsqueda Avanzada</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Salir</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!--Portada-->
+    <div class="container-all" id="move-content">
+
+    <div class="container-cover">
+        <div class="container-info-cover">
+            <h1>Perfil de usuario</h1>
+            <p>¡Aquí podrás encontrar y modificar toda tu información!</p>
+        </div>
+    </div>
+
+    <!--Descripción del perfil-->
+    <label for="inputPassword5" class="form-label-usuario">Nombre de usuario</label>
+    <input type="text" id="inputtextusuario" class="form-control-usuario" aria-describedby="">
+    <label for="inputPassword5" class="form-label-nombre">Nombre completo</label>
+    <input type="text" id="inputtextnombre" class="form-control-nombre" aria-describedby="">
+    <label for="inputPassword5" class="form-label-correo">Correo electrónico</label>
+    <input type="text" id="inputtextcorreo" class="form-control-correo" aria-describedby="">
+    <label for="inputPassword5" class="form-label-edad">Edad</label>
+    <input type="text" id="inputtextedad" class="form-control-edad" aria-describedby="">
+
+    <!--Botones-->
+    <button type="button" class="boton-modificar">Modificar</button>
+    <button type="button" class="boton-guardar">Guardar</button>
+
+    <!--Footer-->
+    <div class="container-footer">
+        <footer>
+            <div class="logo-footer">
+                <img src="Img/logo-fcfm-emblema.png" alt="">
+            </div>
+
+            <div class="redes-footer">
+                <a href="#"><i class="fa-brands fa-facebook-f icon-redes-footer"></i></i></a>
+                <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp icon-redes-footer"></i></a>
+            </div>
+
+            <hr>
+            <h4>@ Programacion Web I - Todos los derechos reservados</h4>
+        </footer>
+    </div>
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
